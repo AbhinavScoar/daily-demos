@@ -47,7 +47,7 @@
         </div>
         <div id="ui-participant-guests"></div>
         <!--Set inline to display: none so does not load on call-->
-        <div id="ui-chat" style="display: none;">
+        <div id="ui-chat">
           <div id="messages">
             <!--Chats will show up here!-->
           </div>
@@ -55,9 +55,9 @@
             <input
               id="chatbox"
               type="text"
-              placeholder="Type your message here..."
+              placeholder="Type a message to start a chat..."
             />
-            <button id="send-message-button">
+            <button onclick="sendMessage()"id="send-message-button">
               <img
                 src="./icon-assets/icon-send-chat.png"
                 alt="Send chat icon"
@@ -117,8 +117,6 @@
           chatLabel.style.color = "white";
         }
       }
-
-      sendMessageButton.addEventListener("click", sendMessage);
 
       /**
        * Updates a participant's local chat window display when the send button is clicked
